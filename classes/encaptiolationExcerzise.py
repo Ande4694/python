@@ -7,7 +7,7 @@ class Car:
         self.__mph = mph
     
     def tell(self):
-        print("This car is a {} {} with {} and a top speed of {} mph".format(self.__make, self.__model, self.__bhp, self.__mph))
+        print("This car is a {} {} with {} bph and a top speed of {} mph".format(self.__make, self.__model, self.__bhp, self.__mph))
     
     @property
     def make(self):
@@ -41,6 +41,15 @@ class Car:
     def mph(self, mph):
         self.__mph = mph
         
+bil = Car('toyoya', 'yaris', 12, 16)
+bil.tell()
+
+
+
+
+
+
+        
 accNum_list = []
 
 class Bank:    
@@ -54,7 +63,7 @@ class Bank:
     
     
     def addAccount(self, account):
-        if account not in self.__accounts and account.no not in accNum_list and account.cust.age >= 18:
+        if account not in self.__accounts and account.no not in accNum_list and account.cust.age >= 18 :
             self.__accounts.append(account)
             accNum_list.append(account.no) 
         
@@ -89,6 +98,8 @@ class Customer:
     def __init__(self, name, age):
         self.__age = age
         self.__name = name
+            
+       
         
     @property
     def name(self):
